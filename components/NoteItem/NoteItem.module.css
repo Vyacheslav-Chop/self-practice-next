@@ -1,0 +1,17 @@
+.link {
+  color: inherit;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: block;
+  padding: 10px;
+  border: 1.5px solid #7f2a2a;
+  background-color: #2c1313;
+  border-radius: 8px;
+  box-shadow: inset 4px 4px 8px #000000aa, inset -4px -4px 8px #4b1a1a;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.02);
+}

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  color: #ff4c4c;
+}
+
+.text {
+  color: #d1d5db;
+  opacity: 0.5;
+  font-size: 1.3rem;
+}
+
+.link {
+  color: inherit;
+  font-size: 1.3rem;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover,
+.link:focus {
+  color: blue;
+  transform: scale(1.05);
+}

@@ -1,0 +1,69 @@
+.wrapperMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.toggleBtn {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.toggleBtn:hover,
+.toggleBtn:focus {
+  color: blue;
+  transform: scale(1.05);
+}
+
+.listMenu {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  min-width: 100px;
+  list-style: none;
+  padding: 5px;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 999999;
+  background-color: #2a1305;
+  border: 1.5px solid #92400e;
+  border-radius: 10px;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.7),
+    inset 0 0 6px rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(3px);
+}
+
+.linkMenu {
+  font-size: 0.85rem;
+  color: inherit;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: block;
+  padding: 10px;
+  border: 1.5px solid #b45309;
+  background-color: #3b1d0d;
+  border-radius: 8px;
+  box-shadow:
+    inset 2px 2px 6px #00000088,
+    inset -2px -2px 6px #4b2a0a;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.linkMenu:hover,
+.linkMenu:focus {
+  background-color: #4a250f;
+  transform: scale(1.02);
+}

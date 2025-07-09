@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px;
+  border-block-end: 1px solid #cccccc;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.link {
+  color: inherit;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover,
+.link:focus {
+  color: blue;
+  transform: scale(1.05);
+}
+
+.logo_link {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
