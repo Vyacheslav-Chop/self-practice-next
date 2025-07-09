@@ -1,0 +1,15 @@
+.section {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aside {
+  width: 240px;
+}
+
+.notesWrapper {
+  width: 100%;
+}

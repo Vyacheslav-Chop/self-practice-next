@@ -18,7 +18,7 @@
 
 .toggleBtn:hover,
 .toggleBtn:focus {
-  color: blue;
+  color: #a43e3e;
   transform: scale(1.05);
 }
 
@@ -58,12 +58,14 @@
     inset 2px 2px 6px #00000088,
     inset -2px -2px 6px #4b2a0a;
   transition:
+    color 0.3s ease,
     transform 0.3s ease,
     background-color 0.3s ease;
 }
 
 .linkMenu:hover,
 .linkMenu:focus {
+  color: #a43e3e;
   background-color: #4a250f;
   transform: scale(1.02);
 }

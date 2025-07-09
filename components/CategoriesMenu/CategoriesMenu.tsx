@@ -50,7 +50,7 @@ export default function CategoriesMenu({ categories }: CategoriesMenuProps) {
             <li key={category.id}>
               <Link
                 className={css.linkMenu}
-                href={`/notes/filter/${category.name}`}
+                href={`/notes/filter/${category.id}`}
                 onClick={closeMenu}
               >
                 {category.name}

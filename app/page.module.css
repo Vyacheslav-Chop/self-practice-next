@@ -1,0 +1,30 @@
+.container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 20px 30px;
+  background-color: #1a0d0d;
+  border-radius: 16px;
+  border: 1.5px solid #842929;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.7),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.title {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+  color: #ffb74d;
+  text-shadow: 0 2px 6px rgba(255, 183, 77, 0.6);
+}
+
+.text {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  color: #ddd;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}

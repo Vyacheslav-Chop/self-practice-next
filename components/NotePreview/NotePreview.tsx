@@ -1,15 +1,26 @@
 "use client";
 
-import ErrorText from "@/components/ErrorText/ErrorText";
-import Loader from "@/components/Loader/Loader";
 import { getSingleNote } from "@/lib/api";
+import Loader from "../Loader/Loader";
+import ErrorText from "../ErrorText/ErrorText";
+import css from "./NotePreview.module.css";
 import { useQuery } from "@tanstack/react-query";
-import { useParams, useRouter } from "next/navigation";
-import css from './NoteDetails.module.css';
+import { useRouter } from "next/navigation";
 
-export default function NoteDetailsClient() {
-  const { id } = useParams<{ id: string }>();
+type NotePreviewProps = {
+  id: string;
+};
+
+export default function NotePreview({ id }: NotePreviewProps) {
   const router = useRouter();
+
+  const handleBack = () => {
+    const isSure = confirm("Are you sure?");
+    if (isSure) {
+      router.back();
+    }
+  };
+
   const {
     data: note,
     isLoading,
@@ -17,13 +28,7 @@ export default function NoteDetailsClient() {
   } = useQuery({
     queryKey: ["note", id],
     queryFn: () => getSingleNote(id),
-    refetchOnMount: false,
   });
-
-  const handleGoBack = () => {
-    const isSure = confirm("Are you sure?");
-    if (isSure) router.back();
-  };
 
   const formattedDate = note?.updatedAt
     ? `Updated at: ${note?.updatedAt}`
@@ -36,7 +41,9 @@ export default function NoteDetailsClient() {
         <ErrorText message="Oooops, something went wrong. Please try again." />
       )}
       <div className={css.container}>
-        <button className={css.button} onClick={handleGoBack}>Back</button>
+        <button className={css.button} onClick={handleBack}>
+          Back
+        </button>
         <h2 className={css.title}>{note?.title}</h2>
         <p className={css.content}>{note?.content}</p>
         <p className={css.date}>{formattedDate}</p>

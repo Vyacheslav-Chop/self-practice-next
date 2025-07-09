@@ -1,0 +1,40 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 2, 2, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal {
+  background-color: #2a1414;
+  border-radius: 20px; /* більший радіус */
+  border: 2px solid #d46262;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.85),
+    inset 0 0 15px rgba(255, 255, 255, 0.07);
+  padding: 40px 35px;
+  max-width: 520px;
+  width: 90%;
+  color: #f0e6e6;
+  font-family: system-ui, sans-serif;
+  position: relative;
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
